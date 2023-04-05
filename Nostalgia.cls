@@ -1,14 +1,19 @@
 % Author: Windabove
 
-\ProvidesClass{Nostalgia}[Nostalgia Note v1.0]
+\ProvidesClass{Nostalgia}[Nostalgia Note v1.1]
 \NeedsTeXFormat{LaTeX2e}
 
 \LoadClass{article}
 \RequirePackage[margin=1in,a4paper]{geometry}
 
 \RequirePackage{unicode-math}
+\RequirePackage{fontspec}
 \setmathfont{STIX Two Math}
 \RequirePackage{newtxtext}
+
+\RequirePackage{amsthm}
+\renewcommand{\proofname}{\textbf{Proof}}
+\renewcommand{\qedsymbol}{$\mdblksquare$}
 
 \RequirePackage[dvipsnames]{xcolor}
 \RequirePackage{tcolorbox}
@@ -26,14 +31,10 @@
 \newenvironment{steps}{\begin{enumerate}[label=\textbf{Step \arabic*}]}{\end{enumerate}}
 
 \RequirePackage{titlesec}
-\newcommand{\ruleafter}{\rule[2ex]{80mm}{1pt}}
+\newcommand{\ruleafter}{\rule[2ex]{100mm}{1pt}}
 \titleformat{\section}{\normalfont\Large\bfseries\color{Cyan}}{\thesection}{1em}{}[\ruleafter]
 \titleformat*{\subsection}{\normalfont\large\bfseries\color{Cyan}}
 \titleformat*{\subsubsection}{\normalfont\normalsize\bfseries\color{Cyan}}
- 
-\RequirePackage{amsthm}
-\renewcommand{\proofname}{\textbf{Proof}}
-\renewcommand{\qedsymbol}{$\mdblksquare$}
 
 \newtcbtheorem[number within=section]{theorem}{Theorem}{
     enhanced,
